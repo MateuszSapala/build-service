@@ -1,4 +1,4 @@
-package sapala.s2sauthservice.buildmanagerservice.config
+package sapala.s2sauthservice.buildservice.config
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Configuration

@@ -1,8 +1,11 @@
-package sapala.s2sauthservice.buildmanagerservice.config
+package sapala.s2sauthservice.buildservice.config
 
 //import com.fasterxml.jackson.dataformat.xml.XmlMapper
+import io.swagger.v3.oas.models.Components
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Info
+import io.swagger.v3.oas.models.security.SecurityRequirement
+import io.swagger.v3.oas.models.security.SecurityScheme
 import okhttp3.OkHttpClient
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -18,11 +21,23 @@ import javax.net.ssl.X509TrustManager
 class Config(val env: Env) {
     @Bean
     fun springShopOpenAPI(): OpenAPI {
+        val securitySchemeName = "bearerAuth"
         return OpenAPI()
             .info(
                 Info().title("build-service")
                     .description("Example service using service-to-service authentication")
                     .version(env.version())
+            )
+            .addSecurityItem(SecurityRequirement().addList(securitySchemeName))
+            .components(
+                Components().addSecuritySchemes(
+                    securitySchemeName,
+                    SecurityScheme()
+                        .name(securitySchemeName)
+                        .type(SecurityScheme.Type.HTTP)
+                        .scheme("bearer")
+                        .bearerFormat("JWT")
+                )
             )
     }
 

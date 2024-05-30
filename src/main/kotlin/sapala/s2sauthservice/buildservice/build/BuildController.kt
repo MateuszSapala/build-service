@@ -1,4 +1,4 @@
-package sapala.s2sauthservice.buildmanagerservice.build
+package sapala.s2sauthservice.buildservice.build
 
 import org.springframework.core.io.ByteArrayResource
 import org.springframework.http.MediaType

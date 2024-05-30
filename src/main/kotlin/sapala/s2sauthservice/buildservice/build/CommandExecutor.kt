@@ -1,4 +1,4 @@
-package sapala.s2sauthservice.buildmanagerservice.build
+package sapala.s2sauthservice.buildservice.build
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

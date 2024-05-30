@@ -1,4 +1,4 @@
-package sapala.s2sauthservice.buildmanagerservice.build
+package sapala.s2sauthservice.buildservice.build
 
 //import com.fasterxml.jackson.dataformat.xml.XmlMapper
 import com.fasterxml.jackson.databind.JsonNode
@@ -9,7 +9,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
-import sapala.s2sauthservice.buildmanagerservice.config.Env
+import sapala.s2sauthservice.buildservice.config.Env
 import java.io.File
 import java.util.*
 import java.util.zip.ZipInputStream

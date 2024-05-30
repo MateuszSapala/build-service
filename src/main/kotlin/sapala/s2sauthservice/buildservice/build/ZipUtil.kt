@@ -1,4 +1,4 @@
-package sapala.s2sauthservice.buildmanagerservice.build
+package sapala.s2sauthservice.buildservice.build
 
 import java.io.File
 import java.io.FileOutputStream
